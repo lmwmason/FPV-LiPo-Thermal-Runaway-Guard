@@ -1,0 +1,8 @@
+/home/just_grassy/Desktop/01.Home/01.Projects/git/FPV-LiPo-Thermal-Runaway-Guard/c/build/CMakeFiles/FPV_LiPo_Thermal_Runaway_Guard.dir
+/home/just_grassy/Desktop/01.Home/01.Projects/git/FPV-LiPo-Thermal-Runaway-Guard/c/build/CMakeFiles/compare_a_ecm_order.dir
+/home/just_grassy/Desktop/01.Home/01.Projects/git/FPV-LiPo-Thermal-Runaway-Guard/c/build/CMakeFiles/compare_b_soc_method.dir
+/home/just_grassy/Desktop/01.Home/01.Projects/git/FPV-LiPo-Thermal-Runaway-Guard/c/build/CMakeFiles/compare_c_soh_method.dir
+/home/just_grassy/Desktop/01.Home/01.Projects/git/FPV-LiPo-Thermal-Runaway-Guard/c/build/CMakeFiles/compare_d_runaway_alert.dir
+/home/just_grassy/Desktop/01.Home/01.Projects/git/FPV-LiPo-Thermal-Runaway-Guard/c/build/CMakeFiles/compare_e_power_control.dir
+/home/just_grassy/Desktop/01.Home/01.Projects/git/FPV-LiPo-Thermal-Runaway-Guard/c/build/CMakeFiles/edit_cache.dir
+/home/just_grassy/Desktop/01.Home/01.Projects/git/FPV-LiPo-Thermal-Runaway-Guard/c/build/CMakeFiles/rebuild_cache.dir

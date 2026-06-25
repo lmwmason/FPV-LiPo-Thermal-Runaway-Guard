@@ -1,0 +1,64 @@
+import scipy.io as sio
+import os
+import csv
+
+try:
+    print("[Load] Loading dataset...")
+    dataset_path = './dataset'
+    battery_files = sorted([f for f in os.listdir(dataset_path) if f.endswith('.mat')])
+    print("[Success] Successfully loaded dataset!")
+except Exception as e:
+    print(f'[Error] {e} while loading dataset.')
+    exit(1)
+
+try:
+    print("[Load] Creating output directory...")
+    os.makedirs('./output/discharge', exist_ok=True)
+    print("[Success] Successfully created output directory!")
+except Exception as e:
+    print(f'[Error] {e} while creating output directory.')
+    exit(1)
+
+for battery_file in battery_files:
+    try:
+        battery_name = battery_file.replace('.mat', '')
+        print(f"[Load] Processing {battery_name}...")
+        mat_data = sio.loadmat(os.path.join(dataset_path, battery_file))
+    except Exception as e:
+        print(f'[Error] {e} while loading {battery_file}.')
+        continue
+
+    try:
+        battery = mat_data[battery_name]
+        cycles = battery['cycle'][0, 0]
+    except Exception as e:
+        print(f'[Error] {e} while parsing {battery_name}.')
+        continue
+
+    try:
+        discharge_idx = 0
+        with open(f'./output/discharge/{battery_name}_discharge.csv', 'w', newline='') as csv_file:
+            writer = csv.writer(csv_file)
+            writer.writerow(['cycle', 'time', 'voltage', 'current', 'temperature'])
+            for i in range(cycles.shape[1]):
+                try:
+                    cycle = cycles[0, i]
+                    if cycle['type'][0] != 'discharge':
+                        continue
+                    cycle_data = cycle['data'][0, 0]
+                    V = cycle_data['Voltage_measured'].flatten()
+                    I = cycle_data['Current_measured'].flatten()
+                    T = cycle_data['Temperature_measured'].flatten()
+                    t = cycle_data['Time'].flatten()
+                    for j in range(len(V)):
+                        writer.writerow([discharge_idx, t[j], V[j], I[j], T[j]])
+                    discharge_idx += 1
+                except Exception as e:
+                    print(f'[Error] {e} while processing cycle {i} of {battery_name}.')
+                    continue
+        print(f"[Success] {battery_name} → {discharge_idx} discharge cycles saved!")
+    except Exception as e:
+        print(f'[Error] {e} while writing CSV for {battery_name}.')
+        continue
+
+print('========== Done!! Saved CSV in ./output/discharge directory! ==========')

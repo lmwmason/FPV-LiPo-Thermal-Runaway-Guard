@@ -1,0 +1,9 @@
+#pragma once
+
+#define ECM2_R0_INIT   0.102240f
+#define ECM2_R1_INIT   0.005599f
+#define ECM2_C1_INIT   2624.5723f
+#define ECM2_TAU1_INIT 14.6950f
+#define ECM2_R2_INIT   0.008303f
+#define ECM2_C2_INIT   19999.9968f
+#define ECM2_TAU2_INIT 166.0512f

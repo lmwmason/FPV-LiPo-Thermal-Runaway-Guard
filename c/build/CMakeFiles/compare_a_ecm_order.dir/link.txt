@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/compare_a_ecm_order.dir/link.d CMakeFiles/compare_a_ecm_order.dir/compare/compare_a_ecm_order.c.o CMakeFiles/compare_a_ecm_order.dir/src/ecm.c.o CMakeFiles/compare_a_ecm_order.dir/src/ecm2.c.o -o compare_a_ecm_order  -lm

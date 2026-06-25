@@ -1,0 +1,3 @@
+/home/just_grassy/Desktop/01.Home/01.Projects/git/FPV-LiPo-Thermal-Runaway-Guard/simulator/build/CMakeFiles/fpv_battery_sim.dir
+/home/just_grassy/Desktop/01.Home/01.Projects/git/FPV-LiPo-Thermal-Runaway-Guard/simulator/build/CMakeFiles/edit_cache.dir
+/home/just_grassy/Desktop/01.Home/01.Projects/git/FPV-LiPo-Thermal-Runaway-Guard/simulator/build/CMakeFiles/rebuild_cache.dir

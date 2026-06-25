@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/compare_b_soc_method.dir/link.d CMakeFiles/compare_b_soc_method.dir/compare/compare_b_soc_method.c.o CMakeFiles/compare_b_soc_method.dir/src/ecm.c.o CMakeFiles/compare_b_soc_method.dir/src/ekf.c.o -o compare_b_soc_method  -lm
