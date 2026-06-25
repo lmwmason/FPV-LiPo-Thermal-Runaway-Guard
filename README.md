@@ -28,8 +28,8 @@ FPV drones use standard LiPo batteries without smart battery systems, making it 
 
 The full technical reports are available in both languages:
 
-- [**English Report**](report/Report_EN.pdf)
-- [**한국어 보고서**](report/Report_KR.pdf)
+- [**English Report**](docs/Report_EN.pdf)
+- [**한국어 보고서**](docs/Report_KR.pdf)
 
 ---
 
